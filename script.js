@@ -143,3 +143,32 @@ function copyCoupon(couponCode) {
   document.body.removeChild(textArea);
   alert('Cupom copiado: ' + couponCode);
 }
+
+
+// Função para verificar se o modal deve ser mostrado
+function checkModalStatus() {
+  // Verifica se a chave 'showWelcomeModal' está salva no localStorage
+  return localStorage.getItem("showWelcomeModal") !== "false";
+}
+
+// Quando a página é carregada
+document.addEventListener("DOMContentLoaded", function() {
+  // Verifica se o modal deve ser exibido
+  if (checkModalStatus()) {
+    // Exibe o modal usando Bootstrap 5
+    var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'), {
+      keyboard: false
+    });
+    myModal.show();
+  }
+
+  // Quando o botão "Não mostrar novamente" for clicado
+  document.getElementById("dontShowAgainButton").addEventListener("click", function() {
+    // Salva a escolha no localStorage para não mostrar o modal novamente
+    localStorage.setItem("showWelcomeModal", "false");
+
+    // Fecha o modal
+    var modal = bootstrap.Modal.getInstance(document.getElementById('welcomeModal'));
+    modal.hide();
+  });
+});
