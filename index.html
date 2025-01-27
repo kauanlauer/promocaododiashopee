@@ -306,44 +306,64 @@
   });
 </script>
 <script>
-  if ('serviceWorker' in navigator && 'PushManager' in window) {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      console.log('Service Worker registrado com sucesso:', registration);
-    }).catch(function(error) {
-      console.log('Falha ao registrar o Service Worker:', error);
-    });
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(function(registration) {
+        console.log('Service Worker registrado com sucesso:', registration);
+      })
+      .catch(function(error) {
+        console.log('Falha ao registrar o Service Worker:', error);
+      });
   }
-  function requestPushPermission() {
+  function scheduleDailyNotifications() {
+    const now = new Date();
+    const targetTime = new Date();
+    targetTime.setHours(18, 15, 0, 0); // Define o horário para as 18h15min
+  
+    if (now > targetTime) {
+      targetTime.setDate(targetTime.getDate() + 1); // Se já passou das 18:15, agenda para o próximo dia
+    }
+  
+    const delay = targetTime - now; // Calcula o tempo até as 18:15 do próximo dia
+  
+    setTimeout(() => {
+      showNotification();
+      // Configura a repetição diária da notificação
+      setInterval(showNotification, 24 * 60 * 60 * 1000); // 24 horas
+    }, delay);
+  }
+  
+  // Função para mostrar a notificação
+  function showNotification() {
     if (Notification.permission === 'granted') {
-      console.log('Permissão para notificações já concedida.');
+      navigator.serviceWorker.ready.then(function(registration) {
+        registration.showNotification('Promoções do Dia', {
+          body: 'Confira as novidades do dia! Visite o nosso site para ver os melhores descontos.',
+          icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopee_logo.svg/1442px-Shopee_logo.svg.png',
+          tag: 'promoções-do-dia',
+        });
+      });
+    }
+  }
+  
+  // Solicitar permissão para notificações
+  function requestNotificationPermission() {
+    if (Notification.permission === 'granted') {
+      scheduleDailyNotifications(); // Já agenda as notificações
     } else {
       Notification.requestPermission().then(function(permission) {
         if (permission === 'granted') {
-          console.log('Permissão concedida.');
-          subscribeUserToPush();
+          scheduleDailyNotifications(); // Agenda as notificações após permissão
         }
       });
     }
   }
   
-  function subscribeUserToPush() {
-    navigator.serviceWorker.ready.then(function(registration) {
-      registration.pushManager.subscribe({
-        userVisibleOnly: true, // Necessário para notificação visível ao usuário
-        applicationServerKey: urlBase64ToUint8Array('SUA_CHAVE_VAPID')
-      }).then(function(subscription) {
-        console.log('Inscrição bem-sucedida para Push:', subscription);
-        // Enviar a inscrição para seu servidor para enviar notificações push
-      }).catch(function(error) {
-        console.error('Falha ao inscrever para notificações push:', error);
-      });
-    });
-  }
-  
-  // Quando o site for carregado, solicitar permissão
+  // Quando a página for carregada, solicite permissão para notificações
   document.addEventListener('DOMContentLoaded', function() {
-    requestPushPermission();
+    requestNotificationPermission();
   });
+    
     
 </script>
     <script src="products.js"></script>
