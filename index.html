@@ -1,68 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Promoções do Dia - Shopee | Ofertas incríveis selecionadas para você!">
-  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopee_logo.svg/1442px-Shopee_logo.svg.png" type="image/x-icon">
-  <meta name="author" content="Afiliado Shopee">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Promoções do Dia - Shopee</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Aviso no topo -->
-  <div class="bg-warning text-dark text-center py-2">
-    <strong>Aviso:</strong> Todos os produtos são comprados diretamente na Shopee. Não compre caso o link redirecione para outro site ou aplicativo fora da Shopee.
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Promoções do Dia - Shopee | Ofertas incríveis selecionadas para você!"/>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopee_logo.svg/1442px-Shopee_logo.svg.png"
+      type="image/x-icon"/>
+    <meta name="author" content="Afiliado Shopee" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Promoções do Dia - Shopee</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Estilo do modal de boas-vindas */
+.modal-content {
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-in-out;
+}
 
-  <!-- Cabeçalho -->
-  <header class="bg-danger text-white text-center py-4">
-    <h1 class="fw-bold">Promoções do Dia</h1>
-    <p>Ofertas incríveis selecionadas para você! 💰</p>
-  </header>
+.modal-header {
+  border-bottom: none;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  <!-- Seção de Produtos -->
-  <main class="container my-4">
-    <div class="row" id="product-list">
-      <!-- Produtos gerados dinamicamente aqui -->
+.modal-title {
+  font-size: 1.5rem;
+  color: #e94e77; /* Cor que remete à Shopee */
+  font-weight: bold;
+  margin: 0;
+}
+
+.modal-body {
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.modal-body p {
+  margin-bottom: 15px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: none;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+}
+
+.btn-close {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #e94e77;
+}
+
+.btn-close:hover {
+  color: #333;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Fading backdrop */
+.modal-backdrop.show {
+  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+    </style>
+  </head>
+  <body>
+
+    <!-- Modal de Boas-Vindas -->
+    <div
+      class="modal fade"
+      id="welcomeModal"
+      tabindex="-1"
+      aria-labelledby="welcomeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="welcomeModalLabel">
+              Bem-vindo ao nosso site!
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Este site foi criado por um afiliado da Shopee, utilizando um
+              sistema com inteligência artificial para encontrar as melhores
+              ofertas e descontos todos os dias. Todos os produtos são novos e
+              atualizados diariamente para você encontrar as melhores promoções.
+            </p>
+            <p>
+              <strong
+                >Fique à vontade para explorar os produtos e aproveitar os
+                descontos incríveis!</strong
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Aviso no topo -->
+    <div class="bg-warning text-dark text-center py-2">
+      <strong>Aviso:</strong> Todos os produtos são comprados diretamente na
+      Shopee. Não compre caso o link redirecione para outro site ou aplicativo
+      fora da Shopee.
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="bg-danger text-white text-center py-4">
+      <h1 class="fw-bold">Promoções do Dia</h1>
+      <p>Ofertas incríveis selecionadas para você! 💰</p>
+    </header>
+
+    <!-- Seção de Produtos -->
+    <main class="container my-4">
+      <div class="row" id="product-list">
+        <!-- Produtos gerados dinamicamente aqui -->
+      </div>
 
       <!-- Lojas mais bem avaliadas -->
       <section class="mt-5">
         <h2 class="text-center mb-4">Lojas Mais Bem Avaliadas</h2>
         <div id="store-list" class="row"></div>
       </section>
-      
-  </main>
+    </main>
 
-  <!-- Rodapé -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>
-      Site criado por <strong>Afiliado Shopee</strong>. Todos os produtos são vendidos exclusivamente pela Shopee.
-      <br>© 2025 Promoções do Dia.
-    </p>
-  </footer>
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>
+        Site criado por <strong>Afiliado Shopee</strong>. Todos os produtos são
+        vendidos exclusivamente pela Shopee. <br />© 2025 Promoções do Dia.
+      </p>
+    </footer>
 
-  <!-- Modal para exibir imagem ampliada -->
-  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="imageModalLabel">Visualizar Produto</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img id="modalImage" src="" alt="Imagem do Produto" class="img-fluid">
+    <!-- Modal para exibir imagem ampliada -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="imageModalLabel">Visualizar Produto</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img
+              id="modalImage"
+              src=""
+              alt="Imagem do Produto"
+              class="img-fluid"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+   <script>
+  // Mostrar o modal ao carregar a página
+  document.addEventListener("DOMContentLoaded", function () {
+    const welcomeModal = new bootstrap.Modal(
+      document.getElementById("welcomeModal")
+    );
+    welcomeModal.show();
+  });
+</script>
 
-  <script src="products.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="store.js"></script>
-  <script src="script.js"></script>  
-</body>
+    <script src="products.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="store.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
