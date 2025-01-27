@@ -68,3 +68,66 @@ document.addEventListener("DOMContentLoaded", () => {
   loadProducts();
   loadStores();
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Verifica se o usuário já aceitou os termos
+  if (!localStorage.getItem('termsAccepted')) {
+    const termsModal = new bootstrap.Modal(document.getElementById("termsModal"));
+    termsModal.show();
+
+    // Se o usuário aceitar os termos
+    document.getElementById('acceptTermsBtn').addEventListener('click', function () {
+      localStorage.setItem('termsAccepted', 'true'); // Marca que os termos foram aceitos
+      requestNotificationPermission(); // Solicita permissão para notificações
+      termsModal.hide(); // Fecha o modal
+    });
+  } else {
+    // Caso os termos já tenham sido aceitos, tenta pedir permissão para notificações
+    requestNotificationPermission();
+  }
+
+  // Função para solicitar permissão para notificações
+  function requestNotificationPermission() {
+    if (Notification.permission === 'granted') {
+      // Se a permissão foi concedida, agende a notificação diária
+      scheduleDailyNotifications();
+    } else if (Notification.permission !== 'denied') {
+      // Solicita permissão para notificações se ainda não foi negada
+      Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+          // Agende a notificação diária
+          scheduleDailyNotifications();
+        }
+      });
+    }
+  }
+
+  // Função para agendar notificações diárias
+  function scheduleDailyNotifications() {
+    const now = new Date();
+    const targetTime = new Date();
+    targetTime.setHours(12, 0, 0, 0); // Define o horário para as 12h
+
+    if (now > targetTime) {
+      targetTime.setDate(targetTime.getDate() + 1); // Se já passou das 12h, agenda para o próximo dia
+    }
+
+    const delay = targetTime - now; // Calcula o tempo até as 12h do próximo dia
+
+    setTimeout(() => {
+      showNotification();
+      // Configura a repetição diária da notificação
+      setInterval(showNotification, 24 * 60 * 60 * 1000); // 24 horas
+    }, delay);
+  }
+
+  // Função para mostrar a notificação
+  function showNotification() {
+    new Notification('Promoções do Dia', {
+      body: 'Confira as novidades do dia! Visite o nosso site para ver os melhores descontos.',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopee_logo.svg/1442px-Shopee_logo.svg.png',
+      tag: 'promoções-do-dia',
+    });
+  }
+});
