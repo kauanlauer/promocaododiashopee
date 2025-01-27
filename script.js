@@ -131,3 +131,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Função para copiar o cupom
+function copyCoupon(couponCode) {
+  const textToCopy = couponCode;
+  const textArea = document.createElement("textarea");
+  textArea.value = textToCopy;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textArea);
+  alert('Cupom copiado: ' + couponCode);
+}

@@ -127,6 +127,29 @@
 
 </style>
   </head>
+
+   <!-- Menu de Navegação -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Promoções</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#product-list">Ver Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#store-list">Ver Lojas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#coupon-list">Ver Cupons</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
   <body>
 
     <!-- Letreiro de Notícias -->
@@ -217,6 +240,7 @@
     </header>
 
     <!-- Seção de Produtos -->
+     
     <main class="container my-4">
       <div class="row" id="product-list">
         <!-- Produtos gerados dinamicamente aqui -->
@@ -228,6 +252,28 @@
         <div id="store-list" class="row"></div>
       </section>
     </main>
+
+    <!-- Cupons de Desconto -->
+      <!-- Seção de Cupons -->
+    <section id="coupon-list" class="container my-4">
+      <h2 class="text-center mb-4">Cupons de Desconto</h2>
+      <div class="coupon">
+          <div class="title">Cupom Volta às Aulas L4P1S3</div>
+          <div class="details">
+              Cupom de 8 reais para compras acima de R$50 em produtos de Volta às Aulas. Válido até 08/02.
+          </div>
+          <button class="btn btn-primary" onclick="copyCoupon('L4P1S3')">Copiar Cupom</button>
+      </div>
+
+      <div class="coupon">
+          <div class="title">Cupom Crianças de Férias S5MM3R</div>
+          <div class="details">
+              Cupom de 10 reais para compras acima de R$80 em produtos para crianças nas férias. Válido até 31/01.
+          </div>
+          <button class="btn btn-primary" onclick="copyCoupon('S5MM3R')">Copiar Cupom</button>
+      </div>
+  </section>
+    <!-- Cupons de Desconto -->
 
     <!-- Rodapé -->
     <footer class="bg-dark text-white text-center py-3">
