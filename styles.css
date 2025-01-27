@@ -173,68 +173,68 @@ footer {
 
 /* Estilo do menu fixo */
 .navbar {
-  position: sticky;
-  top: 0;              /* Fixa o menu no topo */
-  left: 0;
-  z-index: 1030;       /* Garante que o menu fique acima do conteúdo */
-  background-color: #FF5722;  /* Cor vibrante, estilo Shopee */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave para destaque */
-  padding: 10px 0;  /* Espaçamento interno */
+    position: sticky;
+    top: 0;              /* Fixa o menu no topo */
+    left: 0;
+    z-index: 1030;       /* Garante que o menu fique acima do conteúdo */
+    background-color: #FF5722;  /* Cor vibrante, estilo Shopee */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave para destaque */
+    padding: 10px 0;  /* Espaçamento interno */
 }
 
 /* Estilo do botão hamburguer para mobile */
 .navbar-toggler {
-  border-color: white; /* Borda branca */
+    border-color: white; /* Borda branca */
 }
 
 /* Estilo para os itens do menu */
 .navbar-nav {
-  display: flex;
-  justify-content: center;  /* Centraliza os itens do menu */
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    display: flex;
+    justify-content: center;  /* Centraliza os itens do menu */
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 /* Estilo para os itens de navegação */
 .navbar-nav .nav-item {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 
 /* Estilo dos links do menu */
 .navbar-nav .nav-link {
-  color: white;  /* Cor branca do texto */
-  font-weight: 600;  /* Deixa o texto mais grosso */
-  text-transform: uppercase;  /* Coloca as letras em maiúsculas */
-  font-size: 1.1rem;  /* Ajuste de tamanho da fonte */
-  padding: 10px 20px; /* Espaçamento de dentro para os links */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+    color: white;  /* Cor branca do texto */
+    font-weight: 600;  /* Deixa o texto mais grosso */
+    text-transform: uppercase;  /* Coloca as letras em maiúsculas */
+    font-size: 1.1rem;  /* Ajuste de tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento de dentro para os links */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
 }
 
 /* Efeito ao passar o mouse sobre os links */
 .navbar-nav .nav-link:hover {
-  background-color: #FF9800;  /* Cor de destaque para o hover */
-  transform: translateY(-2px);  /* Pequeno efeito de elevação */
-  border-radius: 5px;  /* Bordas arredondadas */
+    background-color: #FF9800;  /* Cor de destaque para o hover */
+    transform: translateY(-2px);  /* Pequeno efeito de elevação */
+    border-radius: 5px;  /* Bordas arredondadas */
 }
 
 /* Estilo do botão de mobile */
 .navbar-toggler-icon {
-  background-color: white; /* Cor branca para o ícone do menu */
+    background-color: white; /* Cor branca para o ícone do menu */
 }
 
 /* Estilo responsivo para telas menores */
 @media (max-width: 768px) {
-  .navbar-nav {
-      flex-direction: column;  /* Alinha os itens do menu em coluna */
-      text-align: center;      /* Alinha os links ao centro */
-  }
+    .navbar-nav {
+        flex-direction: column;  /* Alinha os itens do menu em coluna */
+        text-align: center;      /* Alinha os links ao centro */
+    }
 
-  .navbar-nav .nav-item {
-      padding: 10px 0;  /* Maior espaçamento entre os itens */
-  }
+    .navbar-nav .nav-item {
+        padding: 10px 0;  /* Maior espaçamento entre os itens */
+    }
 
-  .navbar-nav .nav-link {
-      font-size: 1.2rem;  /* Aumenta o tamanho da fonte em telas pequenas */
-  }
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;  /* Aumenta o tamanho da fonte em telas pequenas */
+    }
 }

@@ -129,7 +129,7 @@
   </head>
   <body>
     
-<!-- Menu de Navegação -->
+ <!-- Menu de Navegação -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -149,13 +149,7 @@
           </ul>
       </div>
   </div>
-  <!-- Barra de Mensagem (apenas visível no mobile) -->
-     <!--
-  <div class="notification-bar">
-    <p>||ShopeeShow de Descontos!||</p>
-  </div>
-</nav> -->
- <!-- Menu de Navegação -->
+</nav>
 
 
     <!-- Letreiro de Notícias -->
@@ -187,14 +181,14 @@
   </div>
 </div>
 <!-- Modal de Aceitação de Termos -->
- 
-<!-- Modal de Boas-Vindas -->
-<!--<div class="modal" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+
+ <!-- Modal de Boas-Vindas -->
+<div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="welcomeModalLabel">Bem-vindo ao nosso site!</h5>
-        <button type="button" class="btn-close" id="closeModal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p>
@@ -205,14 +199,16 @@
           Ative as notificações para que todo dia você descubra os produtos do dia.
         </p>
       </div>
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="closeModalAgain">Fechar</button>
-        <button type="button" class="btn btn-primary" id="dontShowAgain">Não mostrar novamente</button>
+      <div class="modal-footer">
+        <!-- Apenas o botão de Fechar -->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
-</div>-->
+</div>
 <!-- Modal de Boas-Vindas -->
+
+
 
     <!-- Aviso no topo -->
     <div class="bg-warning text-dark text-center py-2">
@@ -311,31 +307,9 @@
     welcomeModal.show();
   });
 </script>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(function(registration) {
-        console.log('Service Worker registrado com sucesso: ', registration);
-      })
-      .catch(function(error) {
-        console.log('Falha ao registrar o Service Worker: ', error);
-      });
-  }
-  if (Notification.permission !== 'denied') {
-    Notification.requestPermission().then(function(permission) {
-      if (permission === 'granted') {
-        console.log('Permissão para notificações concedida');
-      } else {
-        console.log('Permissão para notificações negada');
-      }
-    });
-  }     
-</script>
     <script src="products.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="store.js"></script>
     <script src="script.js"></script>
-    <script src="modal.js"></script>
-    <script src="service-worker.js"></script>
   </body>
 </html>
