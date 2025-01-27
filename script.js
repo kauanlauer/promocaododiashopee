@@ -69,16 +69,15 @@ document.addEventListener("DOMContentLoaded", () => {
   loadStores();
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
-  // Verifica se o usuário já aceitou os termos
-  if (!localStorage.getItem('termsAccepted')) {
+  // Verifica se o usuário já aceitou os termos via cookie
+  if (!getCookie('termsAccepted')) {
     const termsModal = new bootstrap.Modal(document.getElementById("termsModal"));
     termsModal.show();
 
     // Se o usuário aceitar os termos
     document.getElementById('acceptTermsBtn').addEventListener('click', function () {
-      localStorage.setItem('termsAccepted', 'true'); // Marca que os termos foram aceitos
+      setCookie('termsAccepted', 'true', 365); // Marca que os termos foram aceitos e armazena o cookie por 365 dias
       requestNotificationPermission(); // Solicita permissão para notificações
       termsModal.hide(); // Fecha o modal
     });
@@ -130,7 +129,28 @@ document.addEventListener("DOMContentLoaded", function () {
       tag: 'promoções-do-dia',
     });
   }
+
+  // Função para definir o cookie
+  function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Defina o prazo para o cookie
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+
+  // Função para pegar o valor de um cookie
+  function getCookie(name) {
+    const nameEq = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i].trim();
+      if (c.indexOf(nameEq) == 0) return c.substring(nameEq.length, c.length);
+    }
+    return "";
+  }
+    // Função para pegar o valor de um cookie
 });
+
 
 // Função para copiar o cupom
 function copyCoupon(couponCode) {
@@ -143,32 +163,5 @@ function copyCoupon(couponCode) {
   document.body.removeChild(textArea);
   alert('Cupom copiado: ' + couponCode);
 }
+// Função para copiar o cupom
 
-
-// Função para verificar se o modal deve ser mostrado
-function checkModalStatus() {
-  // Verifica se a chave 'showWelcomeModal' está salva no localStorage
-  return localStorage.getItem("showWelcomeModal") !== "false";
-}
-
-// Quando a página é carregada
-document.addEventListener("DOMContentLoaded", function() {
-  // Verifica se o modal deve ser exibido
-  if (checkModalStatus()) {
-    // Exibe o modal usando Bootstrap 5
-    var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'), {
-      keyboard: false
-    });
-    myModal.show();
-  }
-
-  // Quando o botão "Não mostrar novamente" for clicado
-  document.getElementById("dontShowAgainButton").addEventListener("click", function() {
-    // Salva a escolha no localStorage para não mostrar o modal novamente
-    localStorage.setItem("showWelcomeModal", "false");
-
-    // Fecha o modal
-    var modal = bootstrap.Modal.getInstance(document.getElementById('welcomeModal'));
-    modal.hide();
-  });
-});

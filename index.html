@@ -182,7 +182,7 @@
 </div>
 <!-- Modal de Aceitação de Termos -->
 
-  <!-- Modal de Boas-Vindas -->
+ <!-- Modal de Boas-Vindas -->
 <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -192,23 +192,16 @@
       </div>
       <div class="modal-body">
         <p>
-          Este site foi criado por um afiliado da Shopee, utilizando um
-          sistema com inteligência artificial para encontrar as melhores
-          ofertas e descontos todos os dias. Todos os produtos são novos e
-          atualizados diariamente para você encontrar as melhores promoções.
+          Este site foi criado por um afiliado da Shopee, utilizando um sistema com inteligência artificial para encontrar as melhores ofertas e descontos todos os dias. Todos os produtos são novos e atualizados diariamente para você encontrar as melhores promoções.
         </p>
         <p>
-          <strong>
-            Fique à vontade para explorar os produtos e aproveitar os
-            descontos incríveis! <br><br>
-            Ative as notificações para que todo dia você descubra os produtos do dia.
-          </strong>
+          <strong>Fique à vontade para explorar os produtos e aproveitar os descontos incríveis!</strong><br>
+          Ative as notificações para que todo dia você descubra os produtos do dia.
         </p>
       </div>
       <div class="modal-footer">
-        <!-- Botão "Não mostrar novamente" -->
-        <button type="button" class="btn btn-warning" id="dontShowAgainButton">Não mostrar novamente</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" id="dontShowAgain">Não mostrar novamente</button>
       </div>
     </div>
   </div>
@@ -313,6 +306,37 @@
     welcomeModal.show();
   });
 </script>
+
+<script>
+  // Verifica se o usuário já escolheu "não mostrar novamente"
+  function checkModalPreference() {
+    // Verifica no localStorage se o usuário já optou por não mostrar o modal
+    const dontShowAgain = localStorage.getItem('dontShowWelcomeModal');
+  
+    // Se o usuário optou por não mostrar o modal, não mostramos ele
+    if (dontShowAgain === 'true') {
+      return; // Não faz nada, o modal não será exibido
+    } else {
+      // Caso contrário, mostramos o modal
+      const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+      welcomeModal.show();
+    }
+  }
+  
+  // Função para salvar a escolha do usuário
+  document.getElementById('dontShowAgain').addEventListener('click', function () {
+    // Salva no localStorage a escolha do usuário para não mostrar o modal novamente
+    localStorage.setItem('dontShowWelcomeModal', 'true');
+    // Fecha o modal após salvar a escolha
+    const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+    welcomeModal.hide();
+  });
+  
+  // Executa a função ao carregar a página para verificar a escolha
+  window.onload = function () {
+    checkModalPreference();
+  };
+  </script>
 
     <script src="products.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
