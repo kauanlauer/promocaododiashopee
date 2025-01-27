@@ -183,5 +183,4 @@ function copyCoupon(couponCode) {
   alert('Cupom copiado: ' + couponCode);
 }
 // Função para copiar o cupom
-
-
+});
