@@ -17,5 +17,41 @@ const products = [
       image: "https://down-br.img.susercontent.com/file/sg-11134201-7rd74-lw8kc001adera0.webp",
       price: "R$39,90 - R$130,00",
     },
+    {
+        name: "Fone de Ouvido Sem Fio Airpods PRO 3 Com Cancelamento De Ruído Bluetooth Pop-Up para iOS e Android ",
+        url: "https://s.shopee.com.br/AKLHBNVjAM",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-ly54dm79v8zk28.webp",
+        price: "R$58,60",
+    },
+    {
+        name: "smartwatch 9 pro Carregamento sem fio relógio inteligente 2.02 inches Série 9 Bluetooth AI Inteligente Esportivo",
+        url: "https://s.shopee.com.br/60CI1YuYBN",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lxi39vzn451255.webp",
+        price: "R$53,99 - R$84,99",
+    },
+    {
+        name: " ",
+        url: " ",
+        image: " ",
+        price: " ",
+    },
+    {
+        name: " ",
+        url: " ",
+        image: " ",
+        price: " ",
+    },
+    {
+        name: " ",
+        url: " ",
+        image: " ",
+        price: " ",
+    },
+    {
+        name: " ",
+        url: " ",
+        image: " ",
+        price: " ",
+    },
   ];
   
