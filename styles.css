@@ -1,0 +1,51 @@
+/* Cores e fontes inspiradas na Shopee */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  header {
+    background-color: #f53d2d;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #f53d2d;
+  }
+  
+  .btn-danger {
+    background-color: #f53d2d;
+    border: none;
+    font-weight: bold;
+  }
+  
+  footer {
+    font-size: 0.9rem;
+  }
+  
