@@ -170,55 +170,71 @@ footer {
 }
 
 
-/* Estilo para o menu fixo no topo */
-#navbar {
-  position: fixed;  /* Fixando o menu no topo */
-  top: 0;           /* Alinhando o menu no topo da tela */
-  left: 0;          /* Alinhando o menu à esquerda */
-  width: 100%;      /* O menu ocupa toda a largura da tela */
-  background-color: #007bff; /* Cor de fundo do menu */
-  color: white;     /* Cor do texto */
-  padding: 10px 20px; /* Espaçamento interno */
-  z-index: 1000;    /* Garantir que o menu fique sobre o conteúdo */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar destaque */
+
+/* Estilo do menu fixo */
+.navbar {
+  position: sticky;
+  top: 0;              /* Fixa o menu no topo */
+  left: 0;
+  z-index: 1030;       /* Garante que o menu fique acima do conteúdo */
+  background-color: #FF5722;  /* Cor vibrante, estilo Shopee */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave para destaque */
+  padding: 10px 0;  /* Espaçamento interno */
 }
 
-/* Ajuste de estilo para os itens do menu */
-#navbar ul {
-  list-style: none;  /* Remove os pontos da lista */
+/* Estilo do botão hamburguer para mobile */
+.navbar-toggler {
+  border-color: white; /* Borda branca */
+}
+
+/* Estilo para os itens do menu */
+.navbar-nav {
+  display: flex;
+  justify-content: center;  /* Centraliza os itens do menu */
   margin: 0;
   padding: 0;
-  display: flex;     /* Flexbox para alinhar os itens do menu horizontalmente */
-  justify-content: space-around; /* Distribuir os itens igualmente */
+  list-style: none;
 }
 
-/* Estilo para os links do menu */
-#navbar ul li {
-  font-size: 1.1rem;  /* Tamanho da fonte */
-  padding: 5px 10px;  /* Espaçamento interno dos itens */
+/* Estilo para os itens de navegação */
+.navbar-nav .nav-item {
+  padding: 0 15px;
 }
 
-#navbar ul li a {
-  text-decoration: none;  /* Remover sublinhado */
-  color: white;           /* Cor do texto dos links */
-  font-weight: bold;      /* Deixar os links em negrito */
-  transition: color 0.3s ease; /* Transição para a mudança de cor ao passar o mouse */
+/* Estilo dos links do menu */
+.navbar-nav .nav-link {
+  color: white;  /* Cor branca do texto */
+  font-weight: 600;  /* Deixa o texto mais grosso */
+  text-transform: uppercase;  /* Coloca as letras em maiúsculas */
+  font-size: 1.1rem;  /* Ajuste de tamanho da fonte */
+  padding: 10px 20px; /* Espaçamento de dentro para os links */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
 }
 
 /* Efeito ao passar o mouse sobre os links */
-#navbar ul li a:hover {
-  color: #ffeb3b;  /* Cor de destaque ao passar o mouse */
+.navbar-nav .nav-link:hover {
+  background-color: #FF9800;  /* Cor de destaque para o hover */
+  transform: translateY(-2px);  /* Pequeno efeito de elevação */
+  border-radius: 5px;  /* Bordas arredondadas */
 }
 
-/* Adaptação para dispositivos móveis (telas menores) */
+/* Estilo do botão de mobile */
+.navbar-toggler-icon {
+  background-color: white; /* Cor branca para o ícone do menu */
+}
+
+/* Estilo responsivo para telas menores */
 @media (max-width: 768px) {
-  #navbar ul {
-      flex-direction: column; /* Empilha os itens verticalmente em telas pequenas */
-      text-align: center;     /* Alinha o texto ao centro */
+  .navbar-nav {
+      flex-direction: column;  /* Alinha os itens do menu em coluna */
+      text-align: center;      /* Alinha os links ao centro */
   }
 
-  #navbar ul li {
-      font-size: 1.2rem;  /* Aumenta o tamanho da fonte para facilitar a leitura em telas pequenas */
-      margin: 10px 0;     /* Espaçamento maior entre os itens */
+  .navbar-nav .nav-item {
+      padding: 10px 0;  /* Maior espaçamento entre os itens */
+  }
+
+  .navbar-nav .nav-link {
+      font-size: 1.2rem;  /* Aumenta o tamanho da fonte em telas pequenas */
   }
 }
