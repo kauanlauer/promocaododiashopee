@@ -47,7 +47,50 @@ header p {
 .card-text {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #f53d2d;
+  color: #f53d2d;body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .btn {
+    border-radius: 20px;
+  }
+  
+  #product-list .card,
+  #store-list .card {
+    min-height: 250px;
+  }
+  
 }
 
 /* Botão */
