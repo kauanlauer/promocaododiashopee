@@ -53,5 +53,47 @@ const products = [
         image: "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lw4hc3kvakja2d.webp",
         price: "R$339,90",
     },
-  ];
-  
+    {
+        name: "Jogo de Lençol 03 Peças 400 Fios Cama Casal Queen Micropercal Ponto Palito",
+        url: "https://s.shopee.com.br/5VG1XzjqJQ",
+        image: "https://down-cvs-br.img.susercontent.com/sg-11134201-7rbl7-lmxhpfuo0pwjb4.webp",
+        price: "R$32,90"
+    },
+    {
+        name: "Capa case Capinha Iphone Silicone Aveludada Protetora com Logo",
+        url: "https://s.shopee.com.br/5AdB9PkIth",
+        image: "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m4s0qqn4hrup5e.webp",
+        price: "R$3,99"
+    },
+    {
+        name: "Kit facas de cozinha/Churrasco Profissional Antiaderente 6 Peças Preto/colorido",
+        url: "https://s.shopee.com.br/8zptiVCtr5",
+        image: "https://down-cvs-br.img.susercontent.com/sg-11134201-7rd4k-lu5etfkbmlecf4.webp",
+        price: "R$16,99"
+    },
+    {
+        name: "Brilho labial claro e hidratante/lábios hidratantes/hidratante/lábios carnudos volumoso/linhas labiais clareadoras/",
+        url: "https://s.shopee.com.br/10ncBtxlfZ",
+        image: "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lyzoj9bhqn1h8c.webp",
+        price: "R$25,22"
+    },
+       {
+        name: "Karseell Collagen Tratamento Capilar 500g",
+        url: "https://s.shopee.com.br/6fRywLWzJV",
+        image: "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lwlretvo5a4y41.webp",
+        price: "R$23,00"
+      },
+      {
+        name: "Rodo e Vassoura Silicone Limpador de Vidro Piso Com Gancho Secos e Molhados Uso Duplo Limpeza Mágica",
+        url: "https://s.shopee.com.br/VrLb3W12r",
+        image: "https://down-cvs-br.img.susercontent.com/sg-11134201-7rbmv-lqeq30bn11nu69.webp",
+        price: "R$24,80"
+    },
+      {
+        name: "Kit 2 Pares De Chinelo Masculino Chinelo Branco Chinelo Preto Macio Confortável Unisex",
+        url: "https://s.shopee.com.br/AA1r6rTbbM",
+        image: "https://down-cvs-br.img.susercontent.com/sg-11134201-7ra3o-m538bpnqaoow0e.webp",
+        price: "R$13,90"
+    },
+
+];
