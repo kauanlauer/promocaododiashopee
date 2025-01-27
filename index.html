@@ -12,7 +12,7 @@
       type="image/x-icon"/>
     <meta name="author" content="Afiliado Shopee" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Promoções do Dia - Shopee</title>
+    <title>Promoções do Dia-Shopee - Produtos novos todos os dias!</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"/>
@@ -89,10 +89,53 @@
   opacity: 0.7;
   background-color: rgba(0, 0, 0, 0.7);
 }
-
     </style>
+  
+<style>
+ /* Estilo do letreiro */
+.ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: #e94e77; /* Cor de fundo do letreiro */
+  padding: 10px 0;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+}
+
+.ticker {
+  display: flex;
+  animation: tickerAnimation 20s linear infinite; /* Aumentei o tempo para 20s */
+}
+
+.ticker p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  padding-right: 50px; /* Espaçamento entre as palavras */
+}
+
+/* Animação do letreiro */
+@keyframes tickerAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+</style>
   </head>
   <body>
+
+    <!-- Letreiro de Notícias -->
+<div class="ticker-wrapper">
+  <div class="ticker">
+    <p>Produtos novos todos os dias, não se esqueça de voltar!</p>
+  </div>
+</div>
+
 
     <!-- Modal de Boas-Vindas -->
     <div
