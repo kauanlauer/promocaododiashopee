@@ -172,55 +172,79 @@ footer {
 
 
 
+/* Estilo do Menu - Desktop */
 .navbar {
   background-color: #FF5722; /* Cor vibrante da Shopee */
-  padding: 10px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: fixed;  /* Fixa o menu no topo da página */
+  padding: 12px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: fixed; /* Fixa o menu no topo da página */
   top: 0;
   left: 0;
   width: 100%; /* Garante que o menu ocupe toda a largura */
-  z-index: 1000; /* Fica acima de outros elementos */
+  z-index: 1000;
+  border-bottom: 1px solid #FF9800;
+  font-family: 'Roboto', sans-serif; /* Fonte clean e nativa */
 }
 
-.logo img {
-  height: 40px;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
-
-.navbar-links ul {
+.navbar .navbar-brand {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-links li {
-  margin: 0 20px;
-}
-
-.navbar-links a {
-  color: white;
+  align-items: center;
   font-weight: bold;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 8px 16px;
-  transition: background-color 0.3s ease;
 }
 
-.navbar-links a:hover {
+.navbar .logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Botão de Menu - Mobile */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  color: #fff;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+/* Links de Navegação */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-item {
+  padding: 0 20px;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link:hover {
   background-color: #FF9800;
   border-radius: 5px;
+  transform: translateY(-3px); /* Leve elevação */
 }
 
-/* Menu Lateral (Mobile) */
+/* Ícones */
+.navbar-nav .nav-link i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Menu Lateral - Mobile */
 .side-menu {
   position: fixed;
   top: 0;
@@ -250,6 +274,7 @@ footer {
   margin: 0;
 }
 
+/* Estilo dos Itens do Menu Lateral */
 .menu-items {
   list-style: none;
   padding: 0;
@@ -273,14 +298,37 @@ footer {
   border-radius: 5px;
 }
 
-/* Estilo Responsivo (Mobile) */
+/* Responsividade para Mobile */
 @media (max-width: 768px) {
-  .navbar-links {
-      display: none; /* Esconde o menu no desktop */
+  .navbar-nav {
+    display: none; /* Esconde os links de navegação no mobile */
   }
 
-  .menu-toggle {
-      display: block;
+  .navbar-toggler {
+    display: block; /* Exibe o ícone de hambúrguer no mobile */
+  }
+
+  .navbar-nav.collapse.show {
+    display: block;
+    position: absolute;
+    top: 60px; /* Posiciona os links abaixo do menu */
+    left: 0;
+    right: 0;
+    background-color: #FF5722;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar-nav .nav-item {
+    padding: 12px 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link i {
+    font-size: 1.5rem;
+    margin-right: 12px;
   }
 }
-
