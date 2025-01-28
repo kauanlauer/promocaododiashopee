@@ -185,7 +185,7 @@ footer {
 }
 
 .logo-mobile {
-  height: 40px; /* Ajuste o tamanho do logo */
+  height: 25px; /* Agora o logo estará ainda menor no mobile */
   transition: all 0.3s ease;
 }
 
@@ -220,7 +220,7 @@ footer {
 
 @media (max-width: 768px) {
   .logo-mobile {
-    height: 30px; /* Reduz o tamanho do logo no mobile */
+    height: 20px; /* Tamanho ainda menor do logo no mobile */
   }
 
   .navbar-nav {
