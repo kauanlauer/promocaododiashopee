@@ -1,62 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="5;url=" id="redirectMetaTag" />
-    <title>Redirecionando...</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f8f9fa;
-      }
-      .container {
-        text-align: center;
-      }
-      .message {
-        font-size: 1.5rem;
-        color: #333;
-      }
-      .redirecting {
-        font-size: 1.2rem;
-        margin-top: 10px;
-        color: #e94e77;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="message">Você será redirecionado direto para a Shopee...</div>
-      <div class="message">Caso você não seja redirecionado para o site ou app oficial da Shopee POR FAVOR NÃO COMPRE NADA!</div>
-      <div class="redirecting">Aguarde 5 segundos...</div>
-    </div>
 
-    <script>
-      // Links da Shopee
-      var links = [
-        "https://s.shopee.com.br/7V16MKqSZz",
-        "https://s.shopee.com.br/6AVilu9ZJ7",
-        "https://s.shopee.com.br/2LJ0CrriqJ",
-        "https://s.shopee.com.br/4AkeOFpya0",
-        "https://s.shopee.com.br/BEVcvI007",
-        "https://s.shopee.com.br/4fguzCrfGF",
-        "https://s.shopee.com.br/1qMjc0XFU8",
-        "https://s.shopee.com.br/6plPZD0bwv",
-        "https://s.shopee.com.br/8UtdYHTSq2",
-        "https://s.shopee.com.br/6fRzMv5F1Z",
-        "https://s.shopee.com.br/3LBXOoGI1b"
-      ];
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="5;url=" id="redirectMetaTag" />
+  <title>Redirecionando...</title>
 
-      // Função para escolher um link aleatório
-      var randomLink = links[Math.floor(Math.random() * links.length)];
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-      // Alterando a tag meta refresh para redirecionar para o link aleatório
-      document.getElementById('redirectMetaTag').setAttribute('content', '5;url=' + randomLink);
-    </script>
-  </body>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 400px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .message {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .redirecting {
+      font-size: 1.2rem;
+      color: #e94e77;
+    }
+
+    .btn {
+      background-color: #ff5722;
+      color: white;
+      border-radius: 50px;
+      border: none;
+      font-weight: 600;
+      width: 100%;
+      padding: 15px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e64a19;
+    }
+
+    .redirecting {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="message">Você será redirecionado para a Shopee...</div>
+    <div class="redirecting">Aguarde 5 segundos...</div>
+    <button class="btn" onclick="window.location.href = randomLink">Ir para a Shopee agora</button>
+  </div>
+
+  <script>
+    // Links da Shopee
+    var links = [
+      "https://s.shopee.com.br/7V16MKqSZz",
+      "https://s.shopee.com.br/6AVilu9ZJ7",
+      "https://s.shopee.com.br/2LJ0CrriqJ",
+      "https://s.shopee.com.br/4AkeOFpya0",
+      "https://s.shopee.com.br/BEVcvI007",
+      "https://s.shopee.com.br/4fguzCrfGF",
+      "https://s.shopee.com.br/1qMjc0XFU8",
+      "https://s.shopee.com.br/6plPZD0bwv",
+      "https://s.shopee.com.br/8UtdYHTSq2",
+      "https://s.shopee.com.br/6fRzMv5F1Z",
+      "https://s.shopee.com.br/3LBXOoGI1b"
+    ];
+
+    // Função para escolher um link aleatório
+    var randomLink = links[Math.floor(Math.random() * links.length)];
+
+    // Alterando a tag meta refresh para redirecionar para o link aleatório
+    document.getElementById('redirectMetaTag').setAttribute('content', '5;url=' + randomLink);
+  </script>
+
+  <!-- Bootstrap JS (opcional, mas recomendado para interatividade extra) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
