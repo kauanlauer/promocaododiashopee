@@ -1,24 +1,24 @@
 // Lista de lojas mais bem avaliadas
 const stores = [
     {
-      name: "Selaria Texas Country",
-      url: "https://s.shopee.com.br/qUBw9dc2Q",
-      image: "https://cf.shopee.sg/file/69f8a9d32b5cd9e5880e19bbaf98a528",
+      name: "TopBeleza.br",
+      url: "https://s.shopee.com.br/6V8Zx7ej33",
+      image: "https://cf.shopee.sg/file/6730e19c3060d2b7c9f13863598eedfe",
     },
     {
-      name: "GALAXIA PET BRASIL",
-      url: "https://s.shopee.com.br/7AOFTnpwAK",
-      image: "https://cf.shopee.sg/file/sg-11134004-7qvdf-lgy1yebl3c4jea",
+      name: "Epoch Loja",
+      url: "https://s.shopee.com.br/AUeiiXVRbI",
+      image: "https://cf.shopee.sg/file/efef0848adb273ed04f8eba93f7e9668",
     },
     {
-      name: "Marimport´s",
-      url: "https://s.shopee.com.br/6V8YgazdJu",
-      image: "https://cf.shopee.sg/file/cca6106a806ca2c085445b985bce257b",
+      name: "mosbyshop",
+      url: "https://s.shopee.com.br/60CJMHzN2Q",
+      image: "https://cf.shopee.sg/file/673e8c5eb2acf89481a863fcf0c1d37d",
     },
     {
-      name: "Magic Girassol",
-      url: "https://shopee.com.br/loja-qualidade",
-      image: "https://cf.shopee.sg/file/br-11134216-7r98s-lmvviyuk6fxz98",
+      name: "Gleicy Shoes",
+      url: "https://s.shopee.com.br/7AOGkSY7fD",
+      image: "https://cf.shopee.sg/file/br-11134216-7r98o-ltcuk52n9se49b",
     },
   ];
   
