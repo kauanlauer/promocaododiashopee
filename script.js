@@ -184,3 +184,12 @@ function copyCoupon(couponCode) {
 }
 // Função para copiar o cupom
 });
+
+function toggleMenu() {
+  const menu = document.getElementById("sideMenu");
+  if (menu.style.left === "-300px") {
+      menu.style.left = "0";
+  } else {
+      menu.style.left = "-300px";
+  }
+}

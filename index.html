@@ -219,33 +219,35 @@
   <body>
     
 <!-- Menu de Navegação -->
-<nav class="navbar navbar-expand-lg navbar-light bg-shopee sticky-top">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#product-list">
-            <i class="bi bi-box"></i> Produtos
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#store-list">
-            <i class="bi bi-shop"></i> Lojas
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#coupon-list">
-            <i class="bi bi-ticket"></i> Cupons
-          </a>
-        </li>
-      </ul>
-    </div>
+<nav class="navbar">
+  <div class="navbar-container">
+      <a href="#" class="logo">
+          <img src="https://logodownload.org/wp-content/uploads/2021/03/shopee-logo.png" alt="Shopee Logo">
+      </a>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <div class="navbar-links">
+          <ul>
+              <li><a href="#product-list">Produtos</a></li>
+              <li><a href="#store-list">Lojas</a></li>
+              <li><a href="#coupon-list">Cupons</a></li>
+          </ul>
+      </div>
   </div>
 </nav>
-<!-- Fim do Menu de Navegação -->
+
+<!-- Menu Lateral (Mobile) -->
+<div id="sideMenu" class="side-menu">
+  <div class="menu-header">
+      <img src="https://www.luandre.com.br/wp-content/uploads/2023/12/SHOPITO1.webp" alt="Mascote Shopee" class="mascote">
+      <h2>Menu</h2>
+  </div>
+  <ul class="menu-items">
+      <li><a href="#product-list">Produtos</a></li>
+      <li><a href="#store-list">Lojas</a></li>
+      <li><a href="#coupon-list">Cupons</a></li>
+  </ul>
+</div>
+
 
 
     <!-- Letreiro de Notícias -->
@@ -292,7 +294,7 @@
         </p>
         <p>
           <strong>Fique à vontade para explorar os produtos e aproveitar os descontos incríveis!</strong><br><br>
-          <!-- <strong>Ative as notificações para que todo dia você descubra os produtos do dia.</strong><br><br>-->
+          <!-- <strong>Ative as notificações para que todo dia você descubra os produtos do dia.</strong><br><br>
                   Estamos em processo de compra de um dominio proprio para nosso site, logo teremos novidades!
         </p>
       </div>
