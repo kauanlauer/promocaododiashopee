@@ -172,25 +172,16 @@ footer {
 
 
 /* Estilo do Corpo da Página */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
-/* Estilo do Menu (Desktop) */
 .navbar {
   background-color: #FF5722; /* Cor vibrante da Shopee */
   padding: 10px 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  position: fixed;  /* Fixa o menu no topo da página */
+  top: 0;
+  left: 0;
+  width: 100%; /* Garante que o menu ocupe toda a largura */
+  z-index: 1000; /* Fica acima de outros elementos */
 }
 
 .logo img {
