@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="5;url=https://s.shopee.com.br/3As79aFF9z" />
+    <meta http-equiv="refresh" content="5;url=" id="redirectMetaTag" />
     <title>Redirecionando...</title>
     <style>
       body {
@@ -31,8 +31,32 @@
   </head>
   <body>
     <div class="container">
-      <div class="message">Você será redirecionado para a Shopee...</div>
+      <div class="message">Você será redirecionado direto para a Shopee...</div>
+      <div class="message">Caso você não seja redirecionado para o site ou app oficial da Shopee POR FAVOR NÃO COMPRE NADA!</div>
       <div class="redirecting">Aguarde 5 segundos...</div>
     </div>
+
+    <script>
+      // Links da Shopee
+      var links = [
+        "https://s.shopee.com.br/7V16MKqSZz",
+        "https://s.shopee.com.br/6AVilu9ZJ7",
+        "https://s.shopee.com.br/2LJ0CrriqJ",
+        "https://s.shopee.com.br/4AkeOFpya0",
+        "https://s.shopee.com.br/BEVcvI007",
+        "https://s.shopee.com.br/4fguzCrfGF",
+        "https://s.shopee.com.br/1qMjc0XFU8",
+        "https://s.shopee.com.br/6plPZD0bwv",
+        "https://s.shopee.com.br/8UtdYHTSq2",
+        "https://s.shopee.com.br/6fRzMv5F1Z",
+        "https://s.shopee.com.br/3LBXOoGI1b"
+      ];
+
+      // Função para escolher um link aleatório
+      var randomLink = links[Math.floor(Math.random() * links.length)];
+
+      // Alterando a tag meta refresh para redirecionar para o link aleatório
+      document.getElementById('redirectMetaTag').setAttribute('content', '5;url=' + randomLink);
+    </script>
   </body>
 </html>
