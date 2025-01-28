@@ -124,8 +124,97 @@
     transform: translateX(-100%);
   }
 }
-
 </style>
+
+    <!-- Estilo do modal para o site da shopee -->
+<style>
+
+  .shopee-content {
+    text-align: center;
+  }
+
+  .shopee-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    transition: all 0.3s ease;
+  }
+
+  .shopee-modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .shopee-modal-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #ff6000;
+  }
+
+  .shopee-modal-button {
+    background-color: #ff6000;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    width: 150px;
+    transition: background-color 0.3s ease;
+  }
+
+  .shopee-modal-button:hover {
+    background-color: #e55b00;
+  }
+
+  .shopee-modal-button-cancel {
+    background-color: #6c757d;
+  }
+
+  .shopee-modal-button-cancel:hover {
+    background-color: #5a6268;
+  }
+
+  .shopee-close {
+    color: #aaa;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  .shopee-close:hover,
+  .shopee-close:focus {
+    color: #000;
+  }
+
+  .shopee-content h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .shopee-content p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+</style>
+    <!-- Estilo do modal para o site da shopee -->
   </head>
   <body>
     
@@ -208,7 +297,16 @@
 </div>
 <!-- Modal de Boas-Vindas -->
 
-
+ <!-- Shopee Modal -->
+ <div id="shopeeModal" class="shopee-modal">
+  <div class="shopee-modal-content">
+    <span class="shopee-close">&times;</span>
+    <div class="shopee-modal-header">Gostaria de ver um produto aleatório direto da shopee?</div>
+    <button id="shopeeYesBtn" class="shopee-modal-button">Sim</button>
+    <button id="shopeeNoBtn" class="shopee-modal-button shopee-modal-button-cancel">Não</button>
+  </div>
+</div>
+ <!-- Shopee Modal -->
 
     <!-- Aviso no topo -->
     <div class="bg-warning text-dark text-center py-2">
@@ -307,6 +405,45 @@
     welcomeModal.show();
   });
 </script>
+
+ <!-- Shopee Modal -->
+<script>
+  var shopeeModal = document.getElementById("shopeeModal");
+  var shopeeClose = document.getElementsByClassName("shopee-close")[0];
+  var shopeeYesBtn = document.getElementById("shopeeYesBtn");
+  var shopeeNoBtn = document.getElementById("shopeeNoBtn");
+
+  // Exibe o modal após 5 segundos
+  setTimeout(function () {
+    shopeeModal.style.display = "block";
+  }, 10000);
+
+  // Fecha o modal
+  shopeeClose.onclick = function () {
+    shopeeModal.style.display = "none";
+  };
+
+  // Se o usuário clicar "Sim", abre a página shopee.html em uma nova guia
+  shopeeYesBtn.onclick = function () {
+    window.open("shopee.html", "_blank");
+    shopeeModal.style.display = "none";
+  };
+
+  // Se o usuário clicar "Não", fecha o modal
+  shopeeNoBtn.onclick = function () {
+    shopeeModal.style.display = "none";
+  };
+
+  // Fecha o modal se o usuário clicar fora dele
+  window.onclick = function (event) {
+    if (event.target == shopeeModal) {
+      shopeeModal.style.display = "none";
+    }
+  };
+</script>
+ <!-- Shopee Modal -->
+</body>
+</html>
     <script src="products.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="store.js"></script>
