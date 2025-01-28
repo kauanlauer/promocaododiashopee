@@ -172,163 +172,85 @@ footer {
 
 
 
-/* Estilo do Menu - Desktop */
+/* Estilo do Menu */
 .navbar {
   background-color: #FF5722; /* Cor vibrante da Shopee */
-  padding: 12px 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  position: fixed; /* Fixa o menu no topo da página */
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Garante que o menu ocupe toda a largura */
+  width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid #FF9800;
-  font-family: 'Roboto', sans-serif; /* Fonte clean e nativa */
 }
 
-.navbar .navbar-brand {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
+.logo-mobile {
+  height: 40px; /* Ajuste o tamanho do logo */
+  transition: all 0.3s ease;
 }
 
-.navbar .logo {
-  height: 40px;
-  margin-right: 10px;
-}
-
-/* Botão de Menu - Mobile */
 .navbar-toggler {
-  border: none;
-  background-color: transparent;
-  font-size: 30px;
-  color: #fff;
+  background-color: #fff; /* Cor do ícone */
 }
 
-.navbar-toggler-icon {
-  background-color: white;
-}
-
-/* Links de Navegação */
 .navbar-nav {
   display: flex;
-  justify-content: center;
-  padding: 0;
+  list-style: none;
   margin: 0;
-  font-weight: 500;
+  padding: 0;
 }
 
 .navbar-nav .nav-item {
-  padding: 0 20px;
+  margin: 0 15px;
 }
 
 .navbar-nav .nav-link {
   color: white;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
   text-transform: uppercase;
   padding: 8px 16px;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
+  transition: background-color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
   background-color: #FF9800;
   border-radius: 5px;
-  transform: translateY(-3px); /* Leve elevação */
 }
 
-/* Ícones */
-.navbar-nav .nav-link i {
-  margin-right: 8px;
-  font-size: 1.2rem;
-}
-
-/* Menu Lateral - Mobile */
-.side-menu {
-  position: fixed;
-  top: 0;
-  left: -300px;
-  height: 100%;
-  width: 300px;
-  background-color: #FF5722;
-  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
-  padding-top: 40px;
-  transition: left 0.3s ease-in-out;
-}
-
-.menu-header {
-  text-align: center;
-  color: white;
-  margin-bottom: 40px;
-}
-
-.menu-header .mascote {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-.menu-header h2 {
-  font-size: 24px;
-  margin: 0;
-}
-
-/* Estilo dos Itens do Menu Lateral */
-.menu-items {
-  list-style: none;
-  padding: 0;
-}
-
-.menu-items li {
-  margin: 15px 0;
-}
-
-.menu-items a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px 20px;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-.menu-items a:hover {
-  background-color: #FF9800;
-  border-radius: 5px;
-}
-
-/* Responsividade para Mobile */
 @media (max-width: 768px) {
+  .logo-mobile {
+    height: 30px; /* Reduz o tamanho do logo no mobile */
+  }
+
   .navbar-nav {
-    display: none; /* Esconde os links de navegação no mobile */
+    display: none;
   }
 
   .navbar-toggler {
-    display: block; /* Exibe o ícone de hambúrguer no mobile */
-  }
-
-  .navbar-nav.collapse.show {
     display: block;
-    position: absolute;
-    top: 60px; /* Posiciona os links abaixo do menu */
-    left: 0;
-    right: 0;
+  }
+
+  .navbar-collapse {
+    width: 100%;
     background-color: #FF5722;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+    display: block;
   }
 
-  .navbar-nav .nav-item {
-    padding: 12px 0;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 1.1rem;
+  .navbar-nav {
+    display: block;
     text-align: center;
   }
 
-  .navbar-nav .nav-link i {
-    font-size: 1.5rem;
-    margin-right: 12px;
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
   }
 }
