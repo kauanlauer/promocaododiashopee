@@ -171,25 +171,5 @@ function getCookie(name) {
   return "";
 }
 
-// Função para copiar o cupom
-function copyCoupon(couponCode) {
-  const textToCopy = couponCode;
-  const textArea = document.createElement("textarea");
-  textArea.value = textToCopy;
-  document.body.appendChild(textArea);
-  textArea.select();
-  document.execCommand("copy");
-  document.body.removeChild(textArea);
-  alert('Cupom copiado: ' + couponCode);
-}
-// Função para copiar o cupom
 });
 
-function toggleMenu() {
-  const menu = document.getElementById("sideMenu");
-  if (menu.style.left === "-300px") {
-      menu.style.left = "0";
-  } else {
-      menu.style.left = "-300px";
-  }
-}

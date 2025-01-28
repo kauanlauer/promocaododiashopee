@@ -336,9 +336,8 @@
 <!-- Fim do Menu de Navegação -->
 
 
-<br><br>
-
     <!-- Letreiro de Notícias -->
+    <br><br>
 <div class="ticker-wrapper">
   <div class="ticker">
     <p>Produtos novos todos os dias, não se esqueça de voltar!</p>
@@ -394,7 +393,7 @@
   </div>
 </div>
 <!-- Modal de Boas-Vindas -->
-<br><br><br>
+
  <!-- Shopee Modal -->
  <div id="shopeeModal" class="shopee-modal">
   <div class="shopee-modal-content">
@@ -435,26 +434,29 @@
     </main>
 
     <!-- Cupons de Desconto -->
-      <!-- Seção de Cupons -->
-    <section id="coupon-list" class="container my-4">
-      <h2 class="text-center mb-4">Cupons de Desconto</h2>
-      <div class="coupon">
-          <div class="title">Cupom Volta às Aulas L4P1S3</div>
-          <div class="details">
-              Cupom de 8 reais para compras acima de R$50 em produtos de Volta às Aulas. Válido até 08/02.
-          </div>
-          <button class="btn btn-primary" onclick="copyCoupon('L4P1S3')">Copiar Cupom</button>
-      </div>
+<section id="coupon-list" class="container my-4">
+  <h2 class="text-center mb-4">Cupons de Desconto</h2>
 
-      <div class="coupon">
-          <div class="title">Cupom Crianças de Férias S5MM3R</div>
-          <div class="details">
-              Cupom de 10 reais para compras acima de R$80 em produtos para crianças nas férias. Válido até 31/01.
-          </div>
-          <button class="btn btn-primary" onclick="copyCoupon('S5MM3R')">Copiar Cupom</button>
+  <!-- Cupom 1 -->
+  <div class="coupon">
+      <div class="title">Cupom Volta às Aulas L4P1S3</div>
+      <div class="details">
+          Cupom de 8 reais para compras acima de R$50 em produtos de Volta às Aulas. Válido até 08/02.
       </div>
-  </section>
-    <!-- Cupons de Desconto -->
+      <button class="btn btn-primary" onclick="copyCoupon('L4P1S3')">Copiar Cupom</button>
+  </div>
+
+  <!-- Cupom 2 -->
+  <div class="coupon">
+      <div class="title">Cupom Crianças de Férias S5MM3R</div>
+      <div class="details">
+          Cupom de 10 reais para compras acima de R$80 em produtos para crianças nas férias. Válido até 31/01.
+      </div>
+      <button class="btn btn-primary" onclick="copyCoupon('S5MM3R')">Copiar Cupom</button>
+  </div>
+</section>
+<!-- Fim Cupons de Desconto -->
+
 
  <!-- Rodapé -->
 <footer class="bg-dark text-white text-center py-4">
@@ -575,6 +577,21 @@
   };
 </script>
  <!-- Shopee Modal -->
+
+ <script>
+  // Função para copiar o cupom
+function copyCoupon(couponCode) {
+  // Usando a API de Clipboard
+  navigator.clipboard.writeText(couponCode).then(function() {
+    // Sucesso na cópia
+    alert('Cupom copiado: ' + couponCode);
+  }).catch(function(error) {
+    // Caso ocorra algum erro ao tentar copiar
+    alert('Erro ao copiar o cupom: ' + error);
+  });
+}
+
+ </script>
 </body>
 </html>
     <script src="products.js"></script>
