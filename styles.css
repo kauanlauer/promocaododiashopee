@@ -171,70 +171,111 @@ footer {
 
 
 
-/* Estilo do menu fixo */
-.navbar {
-    position: sticky;
-    top: 0;              /* Fixa o menu no topo */
-    left: 0;
-    z-index: 1030;       /* Garante que o menu fique acima do conteúdo */
-    background-color: #FF5722;  /* Cor vibrante, estilo Shopee */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave para destaque */
-    padding: 10px 0;  /* Espaçamento interno */
+/* Estilo Geral da Página */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Estilo do botão hamburguer para mobile */
-.navbar-toggler {
-    border-color: white; /* Borda branca */
+/* Estrutura do Wrapper (Conteúdo + Menu) */
+.wrapper {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Estilo para os itens do menu */
-.navbar-nav {
-    display: flex;
-    justify-content: center;  /* Centraliza os itens do menu */
-    margin: 0;
-    padding: 0;
-    list-style: none;
+/* Menu Lateral */
+.menu {
+  width: 250px;
+  background-color: #FF5722; /* Cor vibrante Shopee */
+  position: fixed;
+  top: 0;
+  left: -250px; /* Inicialmente oculto */
+  height: 100%;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+  padding-top: 30px;
+  color: white;
 }
 
-/* Estilo para os itens de navegação */
-.navbar-nav .nav-item {
-    padding: 0 15px;
+.menu-header {
+  text-align: center;
+  padding: 10px;
 }
 
-/* Estilo dos links do menu */
-.navbar-nav .nav-link {
-    color: white;  /* Cor branca do texto */
-    font-weight: 600;  /* Deixa o texto mais grosso */
-    text-transform: uppercase;  /* Coloca as letras em maiúsculas */
-    font-size: 1.1rem;  /* Ajuste de tamanho da fonte */
-    padding: 10px 20px; /* Espaçamento de dentro para os links */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+.menu-header .menu-icon {
+  width: 50px;
+  height: 50px;
 }
 
-/* Efeito ao passar o mouse sobre os links */
-.navbar-nav .nav-link:hover {
-    background-color: #FF9800;  /* Cor de destaque para o hover */
-    transform: translateY(-2px);  /* Pequeno efeito de elevação */
-    border-radius: 5px;  /* Bordas arredondadas */
+.menu-header h3 {
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-/* Estilo do botão de mobile */
-.navbar-toggler-icon {
-    background-color: white; /* Cor branca para o ícone do menu */
+/* Estilo dos Itens de Menu */
+.menu-items {
+  list-style: none;
+  padding: 0;
 }
 
-/* Estilo responsivo para telas menores */
+.menu-items li {
+  margin: 20px 0;
+}
+
+.menu-items li a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efeito de Hover nos Itens do Menu */
+.menu-items li a:hover {
+  background-color: #FF9800;
+  transform: translateX(5px);
+}
+
+/* Conteúdo Principal */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  margin-left: 0;
+}
+
+/* Botão de Abrir o Menu */
+.open-btn {
+  font-size: 30px;
+  color: #FF5722;
+  background-color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Responsividade - Menu Lateral */
 @media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column;  /* Alinha os itens do menu em coluna */
-        text-align: center;      /* Alinha os links ao centro */
-    }
+  .menu {
+      width: 200px;
+  }
 
-    .navbar-nav .nav-item {
-        padding: 10px 0;  /* Maior espaçamento entre os itens */
-    }
+  .menu-items li a {
+      font-size: 16px;
+  }
 
-    .navbar-nav .nav-link {
-        font-size: 1.2rem;  /* Aumenta o tamanho da fonte em telas pequenas */
-    }
+  .open-btn {
+      top: 10px;
+      left: 10px;
+  }
 }
