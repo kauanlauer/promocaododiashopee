@@ -96,4 +96,71 @@ const products = [
         price: "R$13,90"
     },
 
+    {
+        name: "Devocional Café com Deus Pai 2025 | Porções Diárias de Transformação | Junior Rostirola",
+        url: "https://s.shopee.com.br/7pdxWkceUo",
+        image: "https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m06nkrts8n6v52.webp",
+        price: "R$65,77"
+    },
+    {
+        name: "Escova Elétrica de Limpeza 5 em 1 Sem Fio Limpador Multiuso Prático Com Mais Duas Cabeças de Escova",
+        url: "https://s.shopee.com.br/8pWUihncHy",
+        image: "https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m4rxof5a7v411a.webp",
+        price: "R$27,89"
+    },
+    {
+        name: "Calça Pantalona Feminina Cintura Alta Com Bolso Tecido Duna",
+        url: "https://s.shopee.com.br/1LQTmy4v5H",
+        image: "https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lsoi8287u0qj4d.webp",
+        price: "R$29,90"
+    },    {
+        name: "Tênis Feminino Masculino Diker F1 Esportivo Caminhada Academia",
+        url: "https://s.shopee.com.br/5fZSx0mP49",
+        image: "https://down-tx-br.img.susercontent.com/br-11134207-7qukw-lgv5e9fc3x6e20.webp",
+        price: "R$29,99"
+    },    {
+        name: "50.000 Bolinhas De Gel para Arminha Orbeez de munição lançador 7-8mm",
+        url: "https://s.shopee.com.br/3q7olhaATc",
+        image: "https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m3tcat9ob0vsd7.webp",
+        price: "R$10,99"
+    },    {
+        name: "Celular IPhone 12 Pro/ 12 Pro Max 128gb",
+        url: "https://s.shopee.com.br/9KSlJvLCZF",
+        image: "https://down-tx-br.img.susercontent.com/br-11134207-7qukw-lgfi73bb2yiu40.webp",
+        price: "R$3.190,00"
+    },    {
+        name: "Versão Global Xiaomi Nota 5.7 Polegadas 3GB RAM 64GB R0M Qualcomm Snapdragon 801 Android 4.4 13MP 4G smartphone",
+        url: "https://s.shopee.com.br/704qXjxhEO",
+        image: "https://down-tx-br.img.susercontent.com/cn-11134207-7r98o-lni2qma2g42j05.webp",
+        price: "R$159,00"
+    },
+    {
+        name: "Xiaomi Poco F5 5G Global 256GB 12GB Ram Dual Sim",
+        url: "https://s.shopee.com.br/4fgvlVCvg9",
+        image: "https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m5jzhstynyit9e.webp",
+        price: "R$2.650,00"
+    },
+    {
+        name: "Xiaomi Redmi 13 4G Dual Sim 128GB / 6GB RAM Versão Global Original Lacrado + NF",
+        url: "https://s.shopee.com.br/7KhgwRjy0A",
+        image: "https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m0hf63stcvh9a1.webp",
+        price: "R$999,00"
+    },
+    {
+        name: "Smartphone Xiaomi Redmi 14c 256gb/8gb 128gb/4gb GLOBAL ORIGINAL Carregador 33w Tela 6,88",
+        url: "https://s.shopee.com.br/VrMnvDZYs",
+        image: "https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m2h64ei6p2hi5a.webp",
+        price: "R$899,90"
+    },
+   
+
+
+
+
+
+
+
+
+
+
 ];
