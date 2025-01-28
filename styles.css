@@ -289,3 +289,92 @@ footer {
 .coupon button:hover {
   background-color: #FF9800;
 }
+
+
+
+/* Rodapé */
+footer {
+  background-color: #212529; /* Cor escura para o fundo */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+footer .col-md-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+footer .col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+footer .my-2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Ajustes no mobile */
+@media (max-width: 768px) {
+  footer .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  footer .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  footer img {
+    width: 80px; /* Ajuste do tamanho das imagens no mobile */
+    height: auto;
+  }
+
+  footer p {
+    font-size: 0.9rem; /* Reduz o tamanho do texto no mobile */
+    margin-top: 10px;
+  }
+}
+
+footer a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Mensagem de Direitos Autorais */
+footer .mt-4 p {
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+
+/* Hover para os links das redes sociais */
+footer a img:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
