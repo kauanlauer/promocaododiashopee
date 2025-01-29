@@ -152,6 +152,36 @@ const products = [
         image: "https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m2h64ei6p2hi5a.webp",
         price: "R$899,90"
     },
+    {
+        name: "Body Suplex Feminino Decote Quadrado Básico com Forro Alça Grossa",
+        url: "https://s.shopee.com.br/3As9fFKX8a",
+        image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m27louitr88h26@resize_w450_nl.webp",
+        price: "R$26,99"
+    },
+    {
+        name: "GEL DE LIMPEZA GL-02 350G",
+        url: "https://s.shopee.com.br/3As9fFKX8a",
+        image: "https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lz6dxsrzyq0xac.webp",
+        price: "R$48,40"
+    },
+    {
+        name: "Kit Cavalo de Raça Bio Instinto 4itens Anti Queda Brilho Força Crescimento Salão Beleza Frizz",
+        url: "https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lz6dxsrzyq0xac.webp",
+        image: "https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lxb9xf003zjz56.webp",
+        price: "R$23,74"
+    },
+    {
+        name: "kit c/3 Sutiã Básico Reforçado de Microfibra Com Bojo do P ao GG PROMOÇÃO",
+        url: "https://s.shopee.com.br/qUEt8Bm26",
+        image: "https://down-zl-br.img.susercontent.com/19ec1a0459ebc1a4ed486a1d895c2cb7.webp",
+        price: "R$18,75"
+    },
+    {
+        name: "2 LEG SUPLEX LISA zero transparência",
+        url: "https://s.shopee.com.br/4L473bk2Rv",
+        image: "https://down-zl-br.img.susercontent.com/br-11134207-7qukw-ljitenuc8uq260.webp",
+        price: "R$38,99"
+    },
    
 
 

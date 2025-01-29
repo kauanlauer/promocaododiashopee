@@ -256,40 +256,6 @@ footer {
 }
 
 
-/* Estilo para os Cupons */
-.coupon {
-  background-color: #f9f9f9;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.coupon .title {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.coupon .details {
-  margin-top: 5px;
-  color: #666;
-}
-
-.coupon button {
-  background-color: #FF5722;
-  color: white;
-  font-size: 1rem;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.coupon button:hover {
-  background-color: #FF9800;
-}
-
 
 
 /* Rodapé */
@@ -378,3 +344,75 @@ footer a img:hover {
   opacity: 0.8;
   transition: opacity 0.3s;
 }
+
+
+
+
+
+
+/* Contêiner de Cupons */
+.coupon-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Estilo dos Cupons */
+.coupon {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coupon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Cabeçalho do Cupom */
+.coupon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Detalhes do Cupom */
+.coupon-details {
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+/* Código do Cupom */
+.coupon-code {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Botão de Copiar */
+.copy-btn {
+  background: white;
+  color: #ff5722;
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #ffccbc;
+}
+/* Contêiner de Cupons */
